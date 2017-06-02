@@ -3,6 +3,9 @@ CSC220 Programming Project#1
  
 Due Date: TBD, Commit your soultion to your given repository.
 
+Name : 
+Student ID:
+
 - You need to implement SimpleFraction class which is within package PJ1
   See PJ1/SimpleFraction.java and PJ1/SimpleFractionInterface.java for specifications
 
