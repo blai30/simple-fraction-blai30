@@ -1,7 +1,7 @@
 CSC220 Programming Project#1
 ============================
  
-Due Date: TBD, Commit your soultion to your given repository.
+Due Date: TBD, Commit your solution to your given repository.
 
 Name : 
 Student ID:
