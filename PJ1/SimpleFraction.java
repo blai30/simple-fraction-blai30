@@ -131,17 +131,19 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public boolean equals(Object other) {
         // implement this method!
         SimpleFraction Other = (SimpleFraction) other;
-//        if ((num*Other.den)/(den*Other.num) == 1) {
-//            return true;
-//        }
-//        return false;
         return den == Other.den && num == Other.num;
     } // end equals
 
     public int compareTo(SimpleFraction other) {
         // implement this method!
         SimpleFraction Other = (SimpleFraction) other;
-        return (Math.abs(den*Other.num)/Math.abs(num*Other.den)) - 1;
+        int result = 0;
+        if (num*Other.den > den*Other.num) {
+            result = 1;
+        } else if (den*Other.num > num*Other.den) {
+            result = -1;
+        }
+        return result;
     } // end compareTo
 
     public String toString() {
@@ -163,6 +165,8 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // So, you should eliminate - sign
         // then reduce numbers : num/GCD and den/GCD
         int gcd = GCD(Math.abs(num), Math.abs(den));
+        num /= gcd;
+        den /= gcd;
     }	// end reduceSimpleFractionToLowestTerms
 
     /**
