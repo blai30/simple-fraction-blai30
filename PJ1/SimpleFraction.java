@@ -22,7 +22,7 @@
  *    The greatest common denominator of 4 and 8 is 4, so when you divide
  *    the numerator and denominator of 4/8 by 4, you get the fraction 1/2.
  *    The recursive algorithm which finds the greatest common denominator of
- *    two positive integers is implemnted (see code)
+ *    two positive integers is implemented (see code)
  *       
  * 2. It will be easier to determine the correct sign of a fraction if you force
  *    the fraction's denominator to be positive. However, your implementation must 
