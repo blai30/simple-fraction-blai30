@@ -154,6 +154,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // GCD works for + numbers.
         // So, you should eliminate - sign
         // then reduce numbers : num/GCD and den/GCD
+        int GCD = GCD(Math.abs(num), Math.abs(den));
     }	// end reduceSimpleFractionToLowestTerms
 
     /**
