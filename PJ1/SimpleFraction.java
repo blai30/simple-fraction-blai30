@@ -131,10 +131,11 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public boolean equals(Object other) {
         // implement this method!
         SimpleFraction Other = (SimpleFraction) other;
-        if ((num*Other.den)/(den*Other.num) == 1) {
-            return true;
-        }
-        return false;
+//        if ((num*Other.den)/(den*Other.num) == 1) {
+//            return true;
+//        }
+//        return false;
+        return den == Other.den && num == Other.num;
     } // end equals
 
     public int compareTo(SimpleFraction other) {
