@@ -3,8 +3,8 @@ CSC220 Programming Project#1
  
 Due Date: TBD, Commit your solution to your given repository.
 
-Name : 
-Student ID:
+Name : Brian Lai
+Student ID: 916818167
 
 - You need to implement SimpleFraction class which is within package PJ1
   See PJ1/SimpleFraction.java and PJ1/SimpleFractionInterface.java for specifications
