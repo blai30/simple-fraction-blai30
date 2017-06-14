@@ -66,9 +66,9 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 
     public void simplifySimpleFraction() {
         // implement this method!
-        int GCD = GCD(Math.abs(num), Math.abs(den));
-        num /= GCD;
-        den /= GCD;
+        int gcd = GCD(Math.abs(num), Math.abs(den));
+        num /= gcd;
+        den /= gcd;
     }
 
     public double toDouble() {
@@ -154,7 +154,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // GCD works for + numbers.
         // So, you should eliminate - sign
         // then reduce numbers : num/GCD and den/GCD
-        int GCD = GCD(Math.abs(num), Math.abs(den));
+        int gcd = GCD(Math.abs(num), Math.abs(den));
     }	// end reduceSimpleFractionToLowestTerms
 
     /**
