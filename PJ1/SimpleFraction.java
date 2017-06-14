@@ -176,6 +176,17 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 
         return result;
     }	// end GCD
+    
+    /**
+     * Moves negative sign from denominator to numerator if the denominator is
+     * negative and numerator is positive.
+     */
+    private void signFix () {
+        if (den < 0) {
+            num *= -1;
+            den *= -1;
+        }
+    }
 
     //-----------------------------------------------------------------
     //  Some tests are given here 
