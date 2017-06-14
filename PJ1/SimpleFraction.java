@@ -75,7 +75,9 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public double toDouble() {
         // implement this method!
         // return double floating point value
-        return (double) (num / den);
+        double Num = (double) num;
+        double Den = (double) den;
+        return Num/Den;
     }	// end toDouble 
 
     public SimpleFractionInterface add(SimpleFractionInterface secondFraction) {
