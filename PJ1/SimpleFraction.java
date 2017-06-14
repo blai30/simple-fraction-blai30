@@ -72,7 +72,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 	public void simplifySimpleFraction()
         {
 		// implement this method!
-            int GCD = GCD(num, den);
+            int GCD = GCD(Math.abs(num), Math.abs(den));
             num /= GCD;
             den /= GCD;
 	}
