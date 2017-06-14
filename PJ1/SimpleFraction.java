@@ -72,7 +72,9 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 	public void simplifySimpleFraction()
         {
 		// implement this method!
-            
+            int GCD = GCD(num, den);
+            num /= GCD;
+            den /= GCD;
 	}
 
 	public double toDouble()
