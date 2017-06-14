@@ -47,23 +47,32 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 	{
 		// implement this method!
 		// set fraction to default = 0/1
+            setSimpleFraction(0, 1);
 	}	// end default constructor
 
 	public SimpleFraction(int num, int den)
 	{
 		// implement this method!
+            setSimpleFraction(num, den);
 	}	// end constructor
 
 	public void setSimpleFraction(int num, int den)
 	{
 		// implement this method!
 		// return SimpleFractionException if initialDenominator is 0
+            if (den == 0) {
+                throw new SimpleFractionException("Division by 0");
+            } else {
+                this.num = num;
+                this.den = den;
+            }
 	}	// end setSimpleFraction
 
 
 	public void simplifySimpleFraction()
         {
 		// implement this method!
+            
 	}
 
 	public double toDouble()
