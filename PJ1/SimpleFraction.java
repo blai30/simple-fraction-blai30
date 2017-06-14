@@ -133,8 +133,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public int compareTo(SimpleFraction other) {
         // implement this method!
         SimpleFraction Other = (SimpleFraction) other;
-        int compare = (Math.abs(den*Other.num)/Math.abs(num*Other.den)) - 1;
-        return compare;
+        return (Math.abs(den*Other.num)/Math.abs(num*Other.den)) - 1;
     } // end compareTo
 
     public String toString() {
