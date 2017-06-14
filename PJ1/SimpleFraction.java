@@ -123,7 +123,13 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 		// return SimpleFractionException if secondFraction is 0
 		// a/b / c/d is (ad)/(bc)
                 // return result which is a new reduced SimpleFraction object
-		return null;
+            SimpleFraction secFrac = (SimpleFraction) secondFraction;
+            if (num == 0) {
+                throw new SimpleFractionException("secondFraction is 0");
+            }
+            SimpleFraction quotient = new SimpleFraction((num*secFrac.den), (den*secFrac.num));
+            quotient.simplifySimpleFraction();
+		return quotient;
 	}	// end divide
 
 
