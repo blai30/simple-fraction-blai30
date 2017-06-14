@@ -89,7 +89,10 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 		// implement this method!
 		// a/b + c/d is (ad + cb)/(bd)
                 // return result which is a new reduced SimpleFraction object
-		return null;
+            SimpleFraction secFrac = (SimpleFraction)secondFraction;
+            SimpleFraction sum = new SimpleFraction(((num*secFrac.den)+(secFrac.num*den)), (den*secFrac.den));
+            sum.simplifySimpleFraction();
+		return sum;
 	}	// end add
 
 	public SimpleFractionInterface subtract(SimpleFractionInterface secondFraction)
