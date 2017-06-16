@@ -129,7 +129,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public boolean equals(Object other) {
         // implement this method!
         SimpleFraction Other = (SimpleFraction) other;
-        return den == Other.den && num == Other.num;
+        return this.toDouble() == Other.toDouble();
     } // end equals
 
     public int compareTo(SimpleFraction other) {
