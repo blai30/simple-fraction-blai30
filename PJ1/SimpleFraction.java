@@ -136,9 +136,9 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // implement this method!
         SimpleFraction Other = (SimpleFraction) other;
         int result = 0;
-        if (num*Other.den > den*Other.num) {
+        if (this.toDouble() > Other.toDouble()) {
             result = 1;
-        } else if (den*Other.num > num*Other.den) {
+        } else if (this.toDouble() < Other.toDouble()) {
             result = -1;
         }
         return result;
