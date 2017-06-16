@@ -81,7 +81,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // a/b + c/d is (ad + cb)/(bd)
         // return result which is a new reduced SimpleFraction object
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
-        SimpleFraction sum = new SimpleFraction(((num * secFrac.den) + (secFrac.num * den)), (den * secFrac.den));
+        SimpleFraction sum = new SimpleFraction(((num*secFrac.den) + (secFrac.num*den)), (den*secFrac.den));
         sum.simplifySimpleFraction();
         sum.signFix();
         return sum;
@@ -92,7 +92,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // a/b - c/d is (ad - cb)/(bd)
         // return result which is a new reduced SimpleFraction object
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
-        SimpleFraction difference = new SimpleFraction(((num * secFrac.den) - (secFrac.num * den)), (den * secFrac.den));
+        SimpleFraction difference = new SimpleFraction(((num*secFrac.den) - (secFrac.num*den)), (den*secFrac.den));
         difference.simplifySimpleFraction();
         difference.signFix();
         return difference;
@@ -103,7 +103,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // a/b * c/d is (ac)/(bd)
         // return result which is a new reduced SimpleFraction object
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
-        SimpleFraction product = new SimpleFraction((num * secFrac.num), (den * secFrac.den));
+        SimpleFraction product = new SimpleFraction((num*secFrac.num), (den*secFrac.den));
         product.simplifySimpleFraction();
         product.signFix();
         return product;
@@ -118,7 +118,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         if (num == 0) {
             throw new SimpleFractionException("secondFraction is 0");
         }
-        SimpleFraction quotient = new SimpleFraction((num * secFrac.den), (den * secFrac.num));
+        SimpleFraction quotient = new SimpleFraction((num*secFrac.den), (den*secFrac.num));
         quotient.simplifySimpleFraction();
         quotient.signFix();
         return quotient;
