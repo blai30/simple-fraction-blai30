@@ -83,7 +83,6 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
         SimpleFraction sum = new SimpleFraction(((num*secFrac.den) + (secFrac.num*den)), (den*secFrac.den));
         sum.simplifySimpleFraction();
-        sum.signFix();
         return sum;
     }	// end add
 
@@ -94,7 +93,6 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
         SimpleFraction difference = new SimpleFraction(((num*secFrac.den) - (secFrac.num*den)), (den*secFrac.den));
         difference.simplifySimpleFraction();
-        difference.signFix();
         return difference;
     }	// end subtract
 
@@ -105,7 +103,6 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
         SimpleFraction product = new SimpleFraction((num*secFrac.num), (den*secFrac.den));
         product.simplifySimpleFraction();
-        product.signFix();
         return product;
     }	// end multiply
 
@@ -120,7 +117,6 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         }
         SimpleFraction quotient = new SimpleFraction((num*secFrac.den), (den*secFrac.num));
         quotient.simplifySimpleFraction();
-        quotient.signFix();
         return quotient;
     }	// end divide
 
