@@ -62,6 +62,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
             this.num = num;
             this.den = den;
         }
+        simplifySimpleFraction();
     }	// end setSimpleFraction
 
     public void simplifySimpleFraction() {
