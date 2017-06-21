@@ -50,11 +50,13 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 
     public SimpleFraction(int num, int den) {
         // implement this method!
+        // sets num and den for fraction num/den
         setSimpleFraction(num, den);
     }	// end constructor
 
     public void setSimpleFraction(int num, int den) {
         // implement this method!
+        // sets fraction num/den and fixes sign
         // return SimpleFractionException if initialDenominator is 0
         if (den == 0) {
             throw new SimpleFractionException("Division by 0");
@@ -67,6 +69,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 
     public void simplifySimpleFraction() {
         // implement this method!
+        // reduces fraction to lowest terms and fixes sign
         reduceSimpleFractionToLowestTerms();
         signFix();
     }
@@ -123,12 +126,15 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
 
     public boolean equals(Object other) {
         // implement this method!
+        // check equality of two fractions
         SimpleFraction Other = (SimpleFraction) other;
         return this.toDouble() == Other.toDouble();
     } // end equals
 
     public int compareTo(SimpleFraction other) {
         // implement this method!
+        // compares two fractions
+        // 0: equal, 1: greater than, -1: less than
         SimpleFraction Other = (SimpleFraction) other;
         int result = 0;
         if (this.toDouble() > Other.toDouble()) {
