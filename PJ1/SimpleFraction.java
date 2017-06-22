@@ -77,7 +77,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public double toDouble() {
         // implement this method!
         // return double floating point value
-        return (double) num / (double) den;
+        return (double) this.num / (double) this.den;
     }	// end toDouble 
 
     public SimpleFractionInterface add(SimpleFractionInterface secondFraction) {
@@ -116,7 +116,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // a/b / c/d is (ad)/(bc)
         // return result which is a new reduced SimpleFraction object
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
-        if (num == 0) {
+        if (this.num == 0) {
             throw new SimpleFractionException("secondFraction is 0");
         }
         SimpleFraction quotient = new SimpleFraction((this.num*secFrac.den), (this.den*secFrac.num));
@@ -146,7 +146,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     } // end compareTo
 
     public String toString() {
-        return num + "/" + den;
+        return this.num + "/" + this.den;
     } // end toString
 
     //-----------------------------------------------------------------
@@ -163,9 +163,9 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // GCD works for + numbers.
         // So, you should eliminate - sign
         // then reduce numbers : num/GCD and den/GCD
-        int gcd = GCD(Math.abs(num), Math.abs(den));
-        num /= gcd;
-        den /= gcd;
+        int gcd = GCD(Math.abs(this.num), Math.abs(this.den));
+        this.num /= gcd;
+        this.den /= gcd;
     }	// end reduceSimpleFractionToLowestTerms
 
     /**
@@ -193,9 +193,9 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
      * negative and numerator is positive.
      */
     private void signFix () {
-        if (den < 0) {
-            num *= -1;
-            den *= -1;
+        if (this.den < 0) {
+            this.num *= -1;
+            this.den *= -1;
         }
     }
 
