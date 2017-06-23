@@ -51,11 +51,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
     public SimpleFraction(int num, int den) {
         // implement this method!
         // sets num and den for fraction num/den
-        if (den == 0) {
-            throw new SimpleFractionException("Division by 0");
-        } else {
-            setSimpleFraction(num, den);
-        }
+        setSimpleFraction(num, den);
     }	// end constructor
 
     public void setSimpleFraction(int num, int den) {
