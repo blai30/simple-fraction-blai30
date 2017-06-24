@@ -117,7 +117,7 @@ public class SimpleFraction implements SimpleFractionInterface, Comparable<Simpl
         // return result which is a new reduced SimpleFraction object
         SimpleFraction secFrac = (SimpleFraction) secondFraction;
         if (secFrac.num == 0) {
-            throw new SimpleFractionException("secondFraction is 0");
+            throw new SimpleFractionException("Division by 0");
         }
         SimpleFraction quotient = new SimpleFraction((this.num*secFrac.den), (this.den*secFrac.num));
         quotient.simplifySimpleFraction();
